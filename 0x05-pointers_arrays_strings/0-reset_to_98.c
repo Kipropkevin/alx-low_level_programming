@@ -1,6 +1,6 @@
 /**
- * eset_to_98 - takes a pointer to an int parameter
- * and updates the value it points to 98
+ * Reset_to_98 - takes a pointer to an int parameter
+ *           and updates the value it points to 98
  *
  * @n: int parameter
  *
