@@ -23,21 +23,19 @@ int is_square_root(int i, int j)
 }
 
 /**
- * _sqrt_recursion - a function that returns the natural
- * square root of a number
+ * _sqrt_recursion - returns square root
+ * @n: input size
  *
- * @n: input number
- *
- * Return: square root
+ * Description: If n does not have a natural square root,
+ * the function should return -1
+ * Return: returns the natural square root of a number
  */
+
 int _sqrt_recursion(int n)
 {
-	if (n == 1)		/*sqrt(1) == 1*/
-		return (1);
-	else if (n == 0)	/*sqrt(0) == 0*/
-		return (0);
-	else if (n < 0)		/*sqrt(-n) == -1 (NA)*/
+	if (n < 0)
+	{
 		return (-1);
-	else
-		return (_sqrt_recursion_wrapper(n, 1, n));
+	}
+	return (is_square_root(n, 1));
 }
