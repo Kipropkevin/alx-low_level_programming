@@ -2,27 +2,27 @@
 #include <stdio.h>
 
 /**
- * main - multiplies two arguments and prints result
- * @argc: argument count
- * @argv: argument vector
+ * main - a program that multiplies two arguments passed into it
  *
- * Return: 0 if no errors
+ * @argc: holds the number of arguments passed
+ * @argv: array pointer that holds the arguments passed
+ *
+ * Return: Always 0 (Success)
  */
 
 int main(int argc, char *argv[])
 {
-	int i, first_num, sec_num, product;
+	int m;
 
 	if (argc != 3)
 	{
-		return (printf("Erro\n"), 1);
+		printf("Error\n");
+		return (1);
 	}
-	for (i = 0; i < argc; i++)
+	else
 	{
-		first_num = atoi(argv[1]);
-		sec_num = atoi(argv[2]);
+		m = (atoi(argv[1]) * atoi(argv[2]));
+		printf("%d\n", m);
 	}
-	product = first_num * sec_num;
-	printf("%d\n", product);
 	return (0);
 }
